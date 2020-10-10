@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1136px" height="300px" viewBox="0 0 1136 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Header shape 1 + Oval Mask</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="1170" height="300" rx="15"></rect>
+        <linearGradient x1="115.497655%" y1="48.1640388%" x2="31.001292%" y2="54.8852451%" id="linearGradient-3">
+            <stop stop-color="#7E77FF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+        <path d="M-136.34802,148.752511 L415.65198,148.752511 C484.963716,148.752511 541.15198,204.940775 541.15198,274.252511 L541.15198,274.252511 C541.15198,343.564248 484.963716,399.752511 415.65198,399.752511 L-136.34802,399.752511 C-205.659756,399.752511 -261.84802,343.564248 -261.84802,274.252511 L-261.84802,274.252511 C-261.84802,204.940775 -205.659756,148.752511 -136.34802,148.752511 Z" id="path-4"></path>
+        <filter x="-0.7%" y="-1.4%" width="101.4%" height="104.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="115.497655%" y1="31.2091188%" x2="31.001292%" y2="100%" id="linearGradient-6">
+            <stop stop-color="#7E77FF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0.1" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-7" cx="930" cy="-66" r="213"></circle>
+        <filter x="-0.8%" y="-0.6%" width="101.6%" height="101.6%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Saas-Landing-page-v2" transform="translate(-265.000000, -4615.000000)">
+            <g id="Header-shape-1-+-Oval-Mask" transform="translate(265.000000, 4615.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g id="Header-shape-1" opacity="0.100000001" mask="url(#mask-2)" transform="translate(139.651980, 274.252511) rotate(-20.000000) translate(-139.651980, -274.252511) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                    <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                </g>
+                <g id="Oval" opacity="0.100000001" mask="url(#mask-2)">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="url(#linearGradient-6)" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
