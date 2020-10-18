@@ -1,7 +1,7 @@
 @extends('site.index')
 @section('content')
 
-    <div class="slider-area">
+{{--     <div class="slider-area">
             <div class="slider-height2 d-flex align-items-center">
                 <div class="container">
                     <div class="row">
@@ -13,22 +13,39 @@
                     </div>
                 </div>
             </div>
+        </div> --}}
+<div class="page-header">
+            <div class="container">
+                <div class="title-box">
+                    <h1 class="title">مدارس تعمل معنا</h1>
+                    <div class="breadcrumb">
+                        <span>
+                            <a title="Homepage" href="{{ route('site.index') }}"><i class="ti ti-home"></i>&nbsp;&nbsp;اﻟﺮﺋﻴﺴﻴﺔ</a>
+                        </span>
+                        <span class="bread-sep">&nbsp; | &nbsp;</span>
+                        <span>المدارس</span>
+                    </div>  
+                </div>
+            </div>   
+            <div class="shape-bottom">
+                <img src="{{asset ('assets2/images/shapes/price-shape.svg') }}" alt="shape" class="bottom-shape img-fluid">
+            </div>
         </div>
 
     <div class="popular-course section-padding30">
             <div class="container">
-                <div class="row justify-content-sm-center">
+               {{--  <div class="row justify-content-sm-center">
                     <div class="cl-xl-7 col-lg-8 col-md-10">
-                        <!-- Section Tittle -->
+                        Section Tittle
                         <div class="section-tittle text-center mb-70">
-                           {{--  <span>Most School Of This Week</span> --}}
+                            <span>Most School Of This Week</span>
                             <h2>Schools</h2>
                         </div> 
                     </div>
-                </div>
+                </div> --}}
                 <div class="row">
                 	@foreach($schools as $school)
-                    <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="col-xl-3 col-lg-3 col-md-3">
                         <!-- Single course -->
                         <div class="single-course mb-40">
                             <div class="course-img">
@@ -50,7 +67,7 @@
                                 </div> --}}
                                 <div class="course-cap-bottom d-flex justify-content-between">
                                     <ul>
-                                        <li><i class="ti-user"></i>{{ $school->manager_name }}</li>
+                                        <li>{{ $school->manager_name }} <i class="ti-user"></i></li>
                                         <li><i class="fa fa-eye"></i> {{ $school->show }}</li>
                                     </ul>
                                     {{-- <span>Free</span> --}}

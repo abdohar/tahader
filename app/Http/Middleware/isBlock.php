@@ -22,7 +22,7 @@ class isBlock
             return back(); //redirect('/'.Auth::user()->role);  //route role/operation
         }
         else {
-            return redirect('/login/site');
+            return redirect('/login');
         }
     }
 }

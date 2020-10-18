@@ -1,7 +1,7 @@
 @extends('site.index')
 @section('content')
 
-<div class="slider-area">
+{{-- <div class="slider-area">
             <div class="slider-height2 d-flex align-items-center">
                 <div class="container">
                     <div class="row">
@@ -14,8 +14,33 @@
                 </div>
             </div>
         </div>
+ --}}
+        <div class="page-header">
+            <div class="container">
+                <div class="title-box">
+                    <h1 class="title" style="text-align: center;">{{ $school->school_name }}</h1>
+                    <div class="breadcrumb">
+                        <span>
+                            <a title="Homepage" href="{{ route('site.index') }}"><i class="ti ti-home"></i>&nbsp;&nbsp;اﻟﺮﺋﻴﺴﻴﺔ</a>
+                        </span>
+                        <span class="bread-sep">&nbsp; | &nbsp;</span>
+                        <span><a title="Homepage" href="{{ route('site.school') }}">المدارس</span>
+                        </a>
+                        <span class="bread-sep">&nbsp; | &nbsp;</span>
+                        <span>{{ $school->school_name }}</span>
+                    </div>  
+                </div>
+            </div>   
+            <div class="shape-bottom">
+                <img src="{{asset ('assets2/images/shapes/price-shape.svg') }}" alt="shape" class="bottom-shape img-fluid">
+            </div>
+        </div>
+
 <section class="blog_area single-post-area section-padding" style="padding-bottom: 0">
          <div class="container">
+             <div class="col-lg-6">
+                        <h2 style="color: #2d2d2d;margin:10px;text-align: center;">{{ $school->school_name }}</h2>
+                        </div>
         <div class="row" style="margin-bottom: 10px;">
         	<div class="col-lg-8 posts-list">
         		<div class="single-post">
@@ -23,14 +48,21 @@
                         <img class="img-fluid" src="{{ $school->school_cover }}" alt="">
                      </div>
                      <div class="blog_details">
-                        <h2 style="color: #2d2d2d;">{{ $school->school_name }}
-                        </h2>
-                        <ul class="blog-info-link mt-3 mb-4">
+                    <div class="row">
+                         <div class="col-lg-6" style="    direction: ltr;">
+                             <ul class="blog-info-link mt-3 mb-4">
                            <li><a href="#"><i class="fa fa-user"></i>{{ $school->manager_name }}</a></li>
                            <li><a href="#"><i class="fa fa-eye"></i> {{ $school->show }} Vizitor</a></li>
                         </ul>
-                        <p class="excert">
-                          Welcome to <span style="font-size: 18px;font-weight: bold;">{{ $school->school_name }}</span> School, in This Page we show Details about school.
+                        </div>
+                       
+                    </div>
+                        
+                       
+                        <p class="excert" style="font-size: 18px">
+                     
+                           مرحبا بكم في مدرسة  <span style="font-size: 20px;font-weight: bold;">
+                            {{ $school->school_name }}</span> في هذه الصفحة نعرض معومات عن المدرسة
                         </p>
                      </div>
                   </div>
@@ -38,7 +70,7 @@
         	<div class="col-lg-4">
         		<div class="blog_right_sidebar">
         		<aside class="single_sidebar_widget instagram_feeds">
-                        <h4 class="widget_title" style="color: #2d2d2d;">School Logo</h4>
+                        <h4 class="widget_title" style="color: #2d2d2d;">شعار المدرسة</h4>
                         {{-- <ul class="instagram_row flex-wrap"> --}}
                            {{-- <li> --}}
                               <a href="{{ $school->school_logo }}" class="img-pop-up">
@@ -48,16 +80,16 @@
                         {{-- </ul> --}}
                      </aside>
                  </div>
-                 <div class="blog_right_sidebar">
+                 <div class="blog_right_sidebar" style="direction: ltr;text-align: left;">
                  <aside class="single_sidebar_widget tag_cloud_widget">
-                        <h4 class="widget_title" style="color: #2d2d2d;">Contact Info.</h4>
+                        <h4 class="widget_title" style="color: #2d2d2d; text-align: right;">معلومات التواصل</h4>
                         <ul class="list">
                            <div class="col-lg-12 offset-lg-1">
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">
-                                <h3>{{ $school->school_country }}.</h3>
-                                <p>{{ $school->school_city }}</p>
+                                <h3> {{ $school->school_country }}. </h3>
+                                <p> {{ $school->school_city }} </p>
                             </div>
                         </div>
                         <div class="media contact-info">
@@ -88,9 +120,10 @@
 
 <div class="whole-wrap">
 	<div class="container box_1170">
-		<div class="section-top-border">
+		<div class="section-top-border" >
 					<div class="row">
-						<div class="col-lg-8 col-md-8">
+						<div class="col-lg-8 col-md-8" style="direction: ltr;
+    text-align: left;">
 							<h3 class="mb-30">{{ $school->school_name }} Information</h3>
 								<div class="mt-10">
 									<input disabled="" type="text" name="first_name" placeholder="Manager : {{ $school->manager_name }}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required="" class="single-input">
@@ -137,7 +170,7 @@
 							<div class="col-lg-4">
         		<div class="blog_right_sidebar">
         		<aside class="single_sidebar_widget instagram_feeds">
-                        <h4 class="widget_title" style="color: #2d2d2d;">School Image</h4>
+                        <h4 class="widget_title" style="color: #2d2d2d;">صور من المدرسة </h4>
                         <ul class="instagram_row flex-wrap">
                            <li>
                               <a href="{{ $school->school_logo }}" class="img-pop-up">

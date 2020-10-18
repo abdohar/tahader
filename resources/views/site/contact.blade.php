@@ -1,7 +1,7 @@
 @extends('site.index')
 @section('content')
 
-        <div class="slider-area ">
+  {{--       <div class="slider-area ">
             <div class="slider-height2 d-flex align-items-center">
                 <div class="container">
                     <div class="row">
@@ -13,12 +13,32 @@
                     </div>
                 </div>
             </div>
+        </div> --}}
+
+        <div class="page-header page-contact">
+            <div class="container">
+                <div class="title-box">
+                    <h1 class="title">اتصل بنا</h1>
+                    <div class="breadcrumb">
+                        <span>
+                            <a title="Homepage" href="{{ route('site.index') }}"><i class="ti ti-home"></i>&nbsp;&nbsp;اﻟﺮﺋﻴﺴﻴﺔ</a>
+                        </span>
+                        <span class="bread-sep">&nbsp; | &nbsp;</span>
+                        <span>اتصل بنا</span>
+                    </div>  
+                </div>
+            </div>   
+            <div class="shape-bottom">
+                <img src="{{asset ('assets2/images/shapes/price-shape.svg') }}" alt="shape" class="bottom-shape img-fluid">
+            </div>
         </div>
-                <section class="contact-section">
+
+
+                <section class="contact-section" style="padding: 0">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="contact-title">Get in Touch</h2>
+                        <h2 class="contact-title">أرسل لنا </h2>
                         @include('messages')
                     </div>
                     <div class="col-lg-8">
@@ -27,37 +47,38 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="أدخل اسمك الثلاثي">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="أدخل إيميلك">
                                     </div>
                                 </div>
                                 <div class="offset-3 col-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="phone" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Phone'" placeholder="Enter Phone">
+                                        <input class="form-control" name="phone" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Phone'" placeholder="أدخل رقمك">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="أدخل موضوع الرسالة">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="5" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" أكتب رسالتك هنا"></textarea>
                                     </div>
                                 </div>
                                 
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="submit" class="button button-contactForm boxed-btn">إرسال</button>
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-3 offset-lg-1">
+                    <div class="col-lg-3 offset-lg-1" style="direction: ltr;
+    text-align: left;">
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
                             <div class="media-body">

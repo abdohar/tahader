@@ -1,53 +1,71 @@
     <header class="header-area" id="header-area">
             <nav class="navbar navbar-expand-md fixed-top">
                 <div class="container">
-                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img src="images/logo.png" class="img-fluid" alt="Img" /></a></div>
+                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img src="{{asset ('assets2/images/logo.png') }}" class="img-fluid" alt="Img" />
+                    </a>
+                </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"><i class="ti-menu"></i></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-toggle" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">الرئيسية</a>
+                            {{-- <li class="nav-item dropdown">
+                                <a href="{{ route('site.index') }}">اﻟﺮﺋﻴﺴﻴﺔ</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="index.html">الصفحة الرئيسية - 01</a>
-                                    <a class="dropdown-item" href="index-2.html">الصفحة الرئيسية - 02</a>
-                                    <a class="dropdown-item" href="index-3.html">الصفحة الرئيسية - 03</a>
-                                    <a class="dropdown-item" href="index-4.html">الصفحة الرئيسية - 04</a>
-                                    <a class="dropdown-item" href="index-5.html">الصفحة الرئيسية - 05</a>
-                                    <a class="dropdown-item" href="index-6.html">الصفحة الرئيسية - 06</a>
-                                    <a class="dropdown-item" href="index-7.html">الصفحة الرئيسية - 07</a>
+                                    <a class="dropdown-item" href="index.html">01 - اﻟﺼﻔﺤﺔ اﻟﺮﺋﻴﺴﻴﺔ</a>
+                                    <a class="dropdown-item" href="index-2.html">02 - اﻟﺼﻔﺤﺔ اﻟﺮﺋﻴﺴﻴﺔ</a>
+                                    <a class="dropdown-item" href="index-3.html">03 - اﻟﺼﻔﺤﺔ اﻟﺮﺋﻴﺴﻴﺔ</a>
+                                    <a class="dropdown-item" href="index-4.html">04 - اﻟﺼﻔﺤﺔ اﻟﺮﺋﻴﺴﻴﺔ</a>
+                                    <a class="dropdown-item" href="index-5.html">05 - اﻟﺼﻔﺤﺔ اﻟﺮﺋﻴﺴﻴﺔ</a>
+                                    <a class="dropdown-item" href="index-6.html">06 - اﻟﺼﻔﺤﺔ اﻟﺮﺋﻴﺴﻴﺔ</a>
+                                    <a class="dropdown-item" href="index-7.html">07 - اﻟﺼﻔﺤﺔ اﻟﺮﺋﻴﺴﻴﺔ</a>
                                 </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">الصفحات</a>
+                            </li> --}}
+                            {{-- <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" href="#" id="dropdownMenuButton2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">اﻟﺼﻔﺤﺎﺕ</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                                    <a class="dropdown-item" href="about-us.html">من نحن</a>
-                                    <a class="dropdown-item" href="contact-us.html">اتصل بنا</a>
-                                    <a class="dropdown-item" href="faqs.html">الأسئلة الشائعة</a>
-                                    <a class="dropdown-item" href="reviews.html">اراء العملاء</a>
-                                    <a class="dropdown-item" href="signin.html">تسجيل دخول</a>
-                                    <a class="dropdown-item" href="signup.html">تسجيل مستخدم</a>
-                                    <a class="dropdown-item" href="recover-account.html">استعادة كلمة المرور</a>
-                                    <a class="dropdown-item" href="coming-soon.html">الظهور قريبا</a>
-                                    <a class="dropdown-item" href="error-404.html">صفحة الخطأ 404</a>
+                                    <a class="dropdown-item" href="about-us.html">ﻣﻦ ﻧﺤﻦ</a>
+                                    <a class="dropdown-item" href="contact-us.html">اﺗﺼﻞ ﺑﻨﺎ</a>
+                                    <a class="dropdown-item" href="faqs.html">اﻷﺳﺌﻠﺔ اﻟﺸﺎﺋﻌﺔ</a>
+                                    <a class="dropdown-item" href="reviews.html">اﺭاء اﻟﻌﻤﻼء</a>
+                                    <a class="dropdown-item" href="signin.html">ﺗﺴﺠﻴﻞ ﺩﺧﻮﻝ</a>
+                                    <a class="dropdown-item" href="signup.html">ﺗﺴﺠﻴﻞ ﻣﺴﺘﺨﺪﻡ</a>
+                                    <a class="dropdown-item" href="recover-account.html">اﺳﺘﻌﺎﺩﺓ ﻛﻠﻤﺔ اﻟﻤﺮﻭﺭ</a>
+                                    <a class="dropdown-item" href="coming-soon.html">اﻟﻈﻬﻮﺭ ﻗﺮﻳﺒﺎ</a>
+                                    <a class="dropdown-item" href="error-404.html">404 ﺻﻔﺤﺔ اﻟﺨﻄﺄ</a>
                                 </div>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="dropdown-toggle" href="#" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">المقالات</a>
+                            </li> --}}
+                            {{-- <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" href="#" id="dropdownMenuButton3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">اﻟﻤﻘﺎﻻﺕ</a>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
-                                    <a class="dropdown-item" href="blog-1.html">المقالات - العرض الأول</a>
-                                    <a class="dropdown-item" href="blog-2.html">المقالات - العرض الثاني</a>
-                                    <a class="dropdown-item" href="single-post.html">صفحة المقال</a>
+                                    <a class="dropdown-item" href="blog-1.html">اﻟﻤﻘﺎﻻﺕ - اﻟﻌﺮﺽ اﻷﻭﻝ</a>
+                                    <a class="dropdown-item" href="blog-2.html">اﻟﻤﻘﺎﻻﺕ - اﻟﻌﺮﺽ اﻟﺜﺎﻧﻲ</a>
+                                    <a class="dropdown-item" href="single-post.html">ﺻﻔﺤﺔ اﻟﻤﻘﺎﻝ</a>
                                 </div>
-                            </li>
-                            <li class="nav-item"><a href="#" data-scroll-nav="1">المميزات</a></li>
-                            <li class="nav-item"><a href="#" data-scroll-nav="2">كف يعمل</a></li>
-                            <li class="nav-item"><a href="#" data-scroll-nav="3">معرض الصور</a></li>
-                            <li class="nav-item"><a href="#" data-scroll-nav="4">الأسعار</a></li>
-                            <li class="nav-item"><a href="#" data-scroll-nav="7">الأراء</a></li>
-                            <li class="nav-item"><a href="#" data-scroll-nav="6">الأسئلة الشائعة</a></li>
-                            <li class="nav-item"><a href="#" data-scroll-nav="8">اتصل بنا</a></li>
+                            </li> --}}
+                            <li class="nav-item"><a href="{{ route('site.index') }}">الرئيسية</a></li>
+                            <li class="nav-item"><a href="{{ route('site.aboutus') }}">من نحن</a></li>
+                            <li class="nav-item"><a href="{{ route('site.school') }}">المدارس</a></li>
+                            <li class="nav-item"><a href="{{ route('site.services') }}">الخدمات</a></li>
+                            {{-- <li class="nav-item"><a href="{{ route('site.contact') }}">تواصل معنا</a></li> --}}
+                            <li class="nav-item"><a href="{{ route('site.contact') }}">اﺗﺼﻞ ﺑﻨﺎ</a></li>
+
+                             @if(Auth::guest())
+                                        <li><a href="{{ route('site.login') }}"><i class="ti-user"></i> دخول</a>
+                                        </li>
+                                        @else
+                                        <li>
+                                             <a class="dropdown-item" href="{{ route('site.logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('خروج') }}
+                                    </a>
+                                    <form id="logout-form" action="{{ route('site.logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                        </li>
+                                        @endif
+                            
                         </ul>
                     </div>
                 </div>

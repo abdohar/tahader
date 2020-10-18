@@ -161,8 +161,32 @@ ol {
 .page-header{
     position: relative;
     background-size: 200% auto;
-    background: url(../images/start-home-bg2.jpg);
+    background: url(../images/about-us.jpeg);
     position: relative;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 170px 0;
+}
+
+.page-service{
+        position: relative;
+    background-size: 200% auto;
+    background: url(../images/services.jpg);
+     position: relative;
+    background-size: cover;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 170px 0;
+}
+
+.page-contact{
+        position: relative;
+    background-size: 200% auto;
+    background: url(../images/contact-us.jpg);
+     position: relative;
     background-size: cover;
     overflow: hidden;
     background-position: center;
