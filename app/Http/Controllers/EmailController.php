@@ -71,9 +71,11 @@ class EmailController extends Controller
 
     public function sendEmailContact($reciver,$subject,$yourSubject,$yourMessage,$yourPhone,$yourEmail,$yourName)
     {
-         Mail::send('mailContactQueryVisitore',compact('reciver','yourSubject','yourMessage','yourPhone','yourEmail','yourName'), function ($message) use ($reciver,$subject) {
+        $school='schooltahader@gmail.com';
+        $emails=[$reciver,$school];
+         Mail::send('mailContactQueryVisitore',compact('reciver','yourSubject','yourMessage','yourPhone','yourEmail','yourName'), function ($message) use ($subject,$emails) {
         $message->from('schooltahader@gmail.com', 'Tahader');
-        $message->to($reciver);
+        $message->to($emails);
         $message->subject($subject);
         });
     }
