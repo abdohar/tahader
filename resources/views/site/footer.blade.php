@@ -89,19 +89,23 @@
                 <div class="top-footer">
                     <div class="row">
                         <!-- Start Column 1 -->
-                        <div class="col-md-4">
-                            <div class="footer-logo">
-                                <img src="assets2/images/logo.png" class="img-fluid" alt="Img" />
+                       <div class="col-md-4">
+                        <div class="footer-logo">
+                        <a class="navbar-brand" href="{{ route('site.index') }}">
+                        <i class="fas fa-book-reader" style="font-size: 30px; color: #FFF"></i>
+                        <span style="font-size: 34px;color:#FFF">تحاضير</span>
+                        {{-- <img src="{{asset ('assets2/images/logo.png') }}" class="img-fluid" alt="Img" /> --}}
+                    </a>
                             </div>
                             <p style="font-size: 15pء">
                                 متميزون في أعمالنا وكوادرنا, 
  نسعى دائماً لأرضاء عملائنا.
                             </p>
                             <div class="footer-social-links">
-                                <a href="#"><i class="ti-facebook"></i></a>
-                                <a href="#"><i class="ti-twitter-alt"></i></a>
-                                <a href="#"><i class="ti-instagram"></i></a>
-                                <a href="#"><i class="ti-pinterest"></i></a>
+                                <a href="https://www.facebook.com/tahader2020" target="_blank"><i class="ti-facebook"></i></a>
+                                <a href="https://twitter.com/SchoolTahader" target="_blank"><i class="ti-twitter-alt"></i></a>
+                                <a href="https://www.instagram.com/tahaderschool/" target="_blank"><i class="ti-instagram"></i></a>
+                                {{-- <a href="#" target="_blank"><i class="ti-pinterest"></i></a> --}}
                             </div>
                         </div>
                         <!-- End Column 1 -->
@@ -110,12 +114,12 @@
                         <div class="col-md-2">
                             <h4 class="footer-title">روابط مهمه</h4>
                             <ul class="footer-links">
-                                <li><a href="index.html">الرئيسية</a></li>
-                                <li><a href="about-us.html">من نحن</a></li>
-                                <li><a href="contact-us.html">اتصل بنا</a></li>
-                                <li><a href="reviews.html">الأراء</a></li>
-                                <li><a href="faqs.html">الأسئلة المتكررة</a></li>
-                                <li><a href="blog-1.html">المقالات</a></li>
+                                <li><a href="{{ route('site.index') }}">الرئيسية</a></li>
+                                <li><a href="{{ route('site.aboutus') }}">من نحن</a></li>
+                                <li><a href="{{ route('site.contact') }}">اتصل بنا</a></li>
+                                <li><a href="{{ route('site.school') }}">المدارس</a></li>
+                                <li><a href="{{ route('site.services') }}">الخدمات</a></li>
+                                {{-- <li><a href="blog-1.html">المقالات</a></li> --}}
                             </ul>
                         </div>
                         <!-- End Column 2 -->
@@ -124,26 +128,26 @@
                         <div class="col-md-2">
                             <h4 class="footer-title">حساب المستخدم</h4>
                             <ul class="footer-links">
-                                <li><a href="signin.html">تسجيل الدخول</a></li>
-                                <li><a href="signup.html">مستخدم جديد</a></li>
-                                <li><a href="recover-account.html">استعادة الحساب</a></li>
-                                <li><a href="recover-account.html">تغير كلمة المرور</a></li>
-                                <li><a href="error-404.html">404 صفحة الخطأ</a></li>
-                                <li><a href="coming-soon.html">صفحة الظهور قريبا</a></li>
+                                <li><a href="{{ route('site.login') }}">تسجيل الدخول</a></li>
+                                {{-- <li><a href="signup.html">مستخدم جديد</a></li> --}}
+                                <li><a href="{{ route('forget.password') }}">استعادة الحساب</a></li>
+                                {{-- <li><a href="recover-account.html">تغير كلمة المرور</a></li> --}}
+                                {{-- <li><a href="error-404.html">404 صفحة الخطأ</a></li> --}}
+                                {{-- <li><a href="coming-soon.html">صفحة الظهور قريبا</a></li> --}}
                             </ul>
                         </div>
                         <!-- End Column 3 -->
 
                         <!-- Start Column 4 -->
                         <div class="col-md-4">
-                            <h4 class="footer-title">الرسائل الاخبارية</h4>
+                            <h4 class="footer-title">مما يعنينا </h4>
                             <p>
-                                اشترك في النشرة الإخبارية للحصول على التحديث الخاص بك. نحن لا نرسل البريد الإلكتروني الممتد إليك.
+                                اﻧﺴﻴﺮ ﺑﺨﻄُﻰ ﺛﺎﺑﺘﺔ ﻧﺤﻮ اﻻﺭﺗﻘﺎء ﺩﻭﻣًﺎ ﺑﻤﺴﺘﻮﻯ اﻟﺨﺪﻣﺎﺕ اﻟﺘﻌﻠﻴﻤﻴﺔ اﻟﺘﻲ ﻧﻘﺪﻣﻬﺎ ﻟﺠﻤﻴﻊ اﻟﻌﺎﻣﻠﻴﻦ ﻓﻲ اﻟﻤﻨﻈﻮﻣﺔ اﻟﺘﻌﻠﻴﻤﻴﺔ ﻭﻧﻌﻤﻞ ﺟﺎﻫﺪﻳﻦ ﻋﻠﻰ ﺇﺿﺎﻓﺔ اﻟﻤﺰﻳﺪ ﻣﻦ اﻟﺨﺪﻣﺎﺕ اﻟﺘﻲ ﺗﻐﻄﻲ ﻛﺎﻓﺔ ﻣﺘﻄﻠﺒﺎﺕ ﻋﻤﻼﺋﻨﺎ
                             </p>
-                            <form class="newsletter-form">
+                            {{-- <form class="newsletter-form">
                                 <input type="email" placeholder="Enter Your Email" />
                                 <button class="btn theme-btn">اشترك</button>
-                            </form>
+                            </form> --}}
                         </div>
                         <!-- End Column 4 -->
                     </div>
@@ -152,7 +156,7 @@
 
                 <!-- Start Copyrights Area -->
                 <div class="copyrights">
-                    <p>Copyrights © 2020. Designed by  <i class="flaticon-like-2"></i> <a href="https://elmanawy.info/">Marwa El-Manawy</a>.</p>
+                    <p>Copyrights © <?php echo date('Y');?>. Designed by  <i class="flaticon-like-2"></i>Tahader Team.</p>
                 </div>
                 <!-- End Copyrights Area -->
             </div>

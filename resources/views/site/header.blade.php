@@ -1,7 +1,10 @@
     <header class="header-area" id="header-area">
             <nav class="navbar navbar-expand-md fixed-top">
                 <div class="container">
-                    <div class="site-logo"><a class="navbar-brand" href="index.html"><img src="{{asset ('assets2/images/logo.png') }}" class="img-fluid" alt="Img" />
+                    <div class="site-logo"><a class="navbar-brand" href="{{ route('site.index') }}">
+                        <i class="fas fa-book-reader" style="font-size: 30px;"></i>
+                        <span style="font-size: 34px;color:#FFF">تحاضير</span>
+                        {{-- <img src="{{asset ('assets2/images/logo.png') }}" class="img-fluid" alt="Img" /> --}}
                     </a>
                 </div>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
