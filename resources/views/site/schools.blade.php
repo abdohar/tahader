@@ -45,7 +45,7 @@
                 </div> --}}
                 <div class="row">
                 	@foreach($schools as $school)
-                    <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="col-xl-4 col-lg-4 col-md-6">
                         <!-- Single course -->
                         <div class="single-course mb-40">
                             <div class="course-img">
