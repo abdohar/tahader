@@ -50,7 +50,7 @@ class SchoolController extends Controller
     {
     return Validator::make($data, [
             'manager_name'           => ['required', 'string', 'max:255'],
-            'manager_email'          => ['required', 'string', 'max:255'],
+            // 'manager_email'          => ['required', 'string', 'max:255'],
             'manager_phone'          => ['required', 'string', 'max:255'],
             'school_name'            => ['required', 'string', 'max:255'],
             'school_open_year'       => ['required', 'string', 'max:255'],
@@ -98,7 +98,7 @@ class SchoolController extends Controller
         $schoolNmae= $school->school_name;
         $fileNameLogo=$school->school_logo;
         $fileNameCover=$school->school_cover;
-        // return $fileNameCover;
+        // return $manager_email;
         $this->validatorUpdateProf($request->all())->validate();
          if($request['school_logo']) {
              $fileNameLogo = time().'_'.$request['school_logo']->getClientOriginalName();
@@ -116,8 +116,8 @@ class SchoolController extends Controller
          }
 
          $school->update([
-            "manager_name"  => $manager_email,
-            "manager_email"  => $request['manager_email'],
+            "manager_name"  => $request['manager_name'],
+            "manager_email"  => $manager_email,
             "manager_phone"  => $request['manager_phone'],
             "school_name"  => $request['school_name'],
             "school_open_year"  =>date('Y-m-d', strtotime(trim(str_replace('/','-',$request['school_open_year'],)))),
@@ -133,7 +133,7 @@ class SchoolController extends Controller
             "school_cover"  => $fileNameCover,
          ]);
 
-          $this->EmailController->sendEmailEditSchoolProfile($request['manager_email'],'Edit School Acount Tahder');
+          $this->EmailController->sendEmailEditSchoolProfile($manager_email,'Edit School Acount Tahder');
 
 
         return redirect('/school/profile')->with('success','Profile School Update Success');

@@ -17,6 +17,7 @@ class isBlock
     {
         if (Auth::check() && Auth::user()->isblock == 1) {
             return $next($request);
+             # return redirect('/verfication/'.Auth::user()->id);
         }
         elseif (Auth::check()) {
             return back(); //redirect('/'.Auth::user()->role);  //route role/operation
