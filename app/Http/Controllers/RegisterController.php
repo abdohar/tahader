@@ -12,7 +12,7 @@ use App\Http\Controllers\EmailController;
 class RegisterController extends Controller
 {
     protected $EmailController;
-       public function __construct(EmailController $EmailController)
+    public function __construct(EmailController $EmailController)
     {
         $this->EmailController = $EmailController;
     }

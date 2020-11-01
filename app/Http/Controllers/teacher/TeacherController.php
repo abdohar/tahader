@@ -35,7 +35,7 @@ class TeacherController extends Controller
                 ->join('grades', 'grades.id', '=', 'teachergrades.grade_id')
                 ->select('grades.name as name','grades.note as note','grades.id as id')
                 ->get();
-    	 return view('teacher.teacher.grade',compact('teachergrades','user','school_id'));
+    	 return view('teacher.teacher.grade',compact('teachergrades','user','school_id','teacher'));
     }
 
     public function subjectShow(School $school,Grade $grade)

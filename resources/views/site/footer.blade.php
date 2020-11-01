@@ -107,6 +107,7 @@
                                 <a href="https://www.instagram.com/tahaderschool/" target="_blank"><i class="ti-instagram"></i></a>
                                 {{-- <a href="#" target="_blank"><i class="ti-pinterest"></i></a> --}}
                             </div>
+                            
                         </div>
                         <!-- End Column 1 -->
 
@@ -149,6 +150,7 @@
                                 <button class="btn theme-btn">اشترك</button>
                             </form> --}}
                         </div>
+               
                         <!-- End Column 4 -->
                     </div>
                 </div>

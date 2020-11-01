@@ -1,6 +1,30 @@
 @extends('teacher.layout')
 @section('content')
 
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">School : {{ $teacher->school->school_name }}</h4>
+                    <ul class="list-ticked">
+                      <li>This is All Grades you can Access it</li>
+                      {{-- <li>{{ $grade->note }}</li> --}} 
+                    </ul>
+                  </div>
+                </div>
+              </div>
+           {{--    <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+
+                  <div class="card-body" style="padding: 15px;text-align: center;">
+                    <h4 class="card-title" style="margin: 0;">Subject in This Grade {{ $grade->name }}</h4>
+                  </div>
+                </div>
+              </div> --}}
+            </div>
+
+
 <div class="row">
   @foreach($teachergrades as $grade)
 <div class="col-md-4 grid-margin stretch-card">

@@ -27,32 +27,32 @@ class AdminController extends Controller
          $user = User::find(Auth::id());
         // $school = School::where('user_id',$user->id)->first();
 
-        $tracksCount = Track::count();
-        if($tracksCount==0){
-        $tracks = array('International', 'Public School' , 'Decisions');
-        for ($i=0; $i < count($tracks) ; $i++) { 
-            Track::create([
-                'track' => $tracks[$i],
-            ]);
-        }
+        // $tracksCount = Track::count();
+        // if($tracksCount==0){
+        // $tracks = array('International', 'Public School' , 'Decisions');
+        // for ($i=0; $i < count($tracks) ; $i++) { 
+        //     Track::create([
+        //         'track' => $tracks[$i],
+        //     ]);
+        // }
 
-        $cities = array( 'Abhā','Abqaiq',  'Al-Baḥah',    'Al-Dammām',     'Al-Hufūf',    'Al-Jawf',   'Al-Kharj',    'Al-Khubar',     'Al-Qaṭīf',    'Al-Ṭaʾif',    'ʿArʿar',  'Buraydah',    'Dhahran',   'Ḥāʾil', 'Jiddah',  'Jīzān', 'Khamīs Mushayt',          'King Khalīd Military City',
-                    'Mecca', 'Medina',  'Najrān',  'Ras Tanura',      'Riyadh',  'Sakākā',  'Tabūk', 'Yanbuʿ',);
-          for ($i=0; $i < count($cities) ; $i++) { 
-            City::create([
-                'city' => $cities[$i],
-            ]);
-          }
+        // $cities = array( 'Abhā','Abqaiq',  'Al-Baḥah',    'Al-Dammām',     'Al-Hufūf',    'Al-Jawf',   'Al-Kharj',    'Al-Khubar',     'Al-Qaṭīf',    'Al-Ṭaʾif',    'ʿArʿar',  'Buraydah',    'Dhahran',   'Ḥāʾil', 'Jiddah',  'Jīzān', 'Khamīs Mushayt',          'King Khalīd Military City',
+        //             'Mecca', 'Medina',  'Najrān',  'Ras Tanura',      'Riyadh',  'Sakākā',  'Tabūk', 'Yanbuʿ',);
+        //   for ($i=0; $i < count($cities) ; $i++) { 
+        //     City::create([
+        //         'city' => $cities[$i],
+        //     ]);
+        //   }
 
 
-          $grades = array('Kg1', 'Kg2' , 'Kg3' , 'Kg4' ,'First Grade ','Second Grade ','Third Grade ','Fourth Grade ','Fifth Grade ','VI Grade ','Seventh Grade ','VIII Grade ','Ninth Grade ','The tenth','Eleventh Grade ','Bachelor Grad ');
-        for ($i=0; $i < count($grades) ; $i++) { 
-            Grade::create([
-                'name' => $grades[$i],
-                'note' => 'this is '.$grades[$i]
-            ]);
-          }
-        }
+        //   $grades = array('Kg1', 'Kg2' , 'Kg3' , 'Kg4' ,'First Grade ','Second Grade ','Third Grade ','Fourth Grade ','Fifth Grade ','VI Grade ','Seventh Grade ','VIII Grade ','Ninth Grade ','The tenth','Eleventh Grade ','Bachelor Grad ');
+        // for ($i=0; $i < count($grades) ; $i++) { 
+        //     Grade::create([
+        //         'name' => $grades[$i],
+        //         'note' => 'this is '.$grades[$i]
+        //     ]);
+        //   }
+        // }
         $grades=Grade::count();
         $schools=School::count();
         $subjects=Subject::count();
